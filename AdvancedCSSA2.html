@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Animation</title>
+
+   <style>
+
+       #main {
+       width: 600px;
+       height: 500px;
+       background-color: #050210;
+       position: relative;
+       }
+       #additional {
+       width: 449px;
+       height: 449px;
+       margin: 25px 75px;
+       border-radius: 100%;
+       position: absolute;
+       box-shadow: inset 0 0 50px 50px #050210;
+       background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+       animation-name: glow-anim;
+       animation-duration: 1s;
+       animation-iteration-count: infinite;
+       animation-delay: 0s;
+       animation-play-state: running;
+       animation-timing-function: linear;
+       }
+
+       #anim {
+       width: 350px;
+       height: 350px;
+       border-radius: 100%;
+       margin: 50px;
+       position: absolute;
+       background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+       filter: blur(1px);
+       animation-name: circle-anim;
+       animation-duration: 1s;
+       animation-iteration-count: infinite;
+       animation-delay: 0s;
+       animation-play-state: running;
+       animation-timing-function: linear;
+       }
+       #center {
+       width: 280px;
+       height: 280px;
+       border-radius: 100%;
+       background-color: #050210;
+       margin: 35px;
+       position: absolute;
+       }
+
+       #origin {
+       width: 2px;
+       height: 2px;  
+       border-radius: 100%;
+       background-color: #050210;
+       margin: 249px 299px;
+       position: absolute;
+       animation-name: origin-anim;
+       animation-duration: 1.5s;
+       animation-iteration-count: infinite;
+       animation-delay: 0s;
+       animation-play-state: running;
+       animation-timing-function: ease-out;
+       }
+       @keyframes origin-anim {
+       from {
+        width: 2px;
+        height: 2px;
+        
+        }
+       to {
+        width: 280px;
+        height: 280px;
+        transform: translate(-140px, -140px); 
+        filter: brightness(300%);
+        }
+       }
+       @keyframes circle-anim {
+       from {
+        transform: rotate(0deg);
+            }
+       to {
+        transform: rotate(360deg);
+        }
+       }
+       @keyframes glow-anim {
+       from {
+        transform: rotate(0deg);
+        }
+       to {
+        transform: rotate(360deg);
+        }
+      }
+     
+    
+   </style>
+ </head>
+
+ <body>
+      <div id="main">
+        <div id="additional">
+           <div id="anim">
+             <div id="center">
+             </div>
+           <div>
+          </div>
+        </div>
+      </div>
+      <div id="origin">
+      </div>
+
+      
+</body>
+</html>
